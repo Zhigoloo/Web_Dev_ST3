@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: Arial;
+    
+}
+   
+    
+    h1{
+        text-align: center;
+        background-color: #6fc316;
+        
+    }
+
+    h3{
+        text-align: center;
+    }
+    
+    
+.flip-card {
+  
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #6fc316;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+    <title>Meet the team</title>
+</head>
+<body>
+     <div class="banner">
+        <div class="fakenavbar">
+          <img src="logo.png" alt="logo" class="logo">
+        <div class="navbar">
+            <ul>
+                <li><a class="home" href="https://w1986769.users.ecs.westminster.ac.uk/WebDev/w1986769_homepage.html" style="color: white">Home</a></li>
+                <li><a class="store" href="https://w2046966.users.ecs.westminster.ac.uk/WebDev/Shop.html" style="color: white">Store</a></li>
+                <li><a class="feedback" href="whttps://w1986769.users.ecs.westminster.ac.uk/WebDev/w1986769_feedback.html" style="color: white">Feedback</a></li>
+                <li><a class="gallery" href="#" style="color: white">Gallery</a></li>
+                <li><a class="content" href="#" style="color: white">Content Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="#" style="color: white">Student 1</a></li>
+                        <li><a href="w1986769_pageeditor.html" style="color: white">Student 2</a></li>
+                        <li><a href="#" style="color: white">Student 3</a></li>
+                        <li><a href="#" style="color: white">Student 4</a></li>
+                    </ul>
+                <li><a class="user" href="https://w1991760.users.ecs.westminster.ac.uk/webDev/profile.html" style="color: white">User Profile</a>
+                <li><a class="meet" href="https://w1991760.users.ecs.westminster.ac.uk/webDev/team.html" style="color: white">Meet the team</a>    
+                <li><a href="#" style="color: white">Page Editors</a>
+                    <ul class="dropdown">
+                        <li><a href="#" style="color: white">Student 1</a></li>
+                        <li><a href="w1986769_pageeditor.html" style="color: white">Student 2</a></li>
+                        <li><a href="#" style="color: white">Student 3</a></li>
+                        <li><a href="#" style="color: white">Student 4</a></li>
+                    </ul>
+                </li>
+            
+            </ul>
+        </div>
+        </div>
+    <br>
+    <br>
+
+<h1>Meet the team</h1>
+<br>
+<h3>Hover over the image for more details:</h3>
+<br>         
+         
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Erild.jpg" alt="Erild Kondi" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Erild Kondi</h1> 
+      <p>Role:Student 3</p> 
+      <p>User profile  |  Team</p>
+    </div>
+  </div>
+</div>
+
+    <br>
+    <br>
+    
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Mikayel.jpg" alt="Mikayel" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Mikayel Ahmed</h1> 
+      <p>Role:Student 2</p> 
+      <p>Home Page/template/nav  |  Feedback</p>
+    </div>
+  </div>
+</div>
+    
+    <br>
+    <br>
+    
+ 
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="parham.jpg" alt="Parham" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Parham Golmohammandi</h1> 
+      <p>Role:Student 1</p> 
+      <p>Splash Screen  |  Shop</p>
+    </div>
+  </div>
+</div>
+    </div> 
+</body>
+</html>

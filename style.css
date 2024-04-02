@@ -1,0 +1,174 @@
+@charset "utf-8";
+* {
+	text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 95%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #006400;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.fakenavbar {
+    width: 85%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0);
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 90px;
+    cursor: pointer;
+    position: absolute;
+    left: 10%
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+.navbar ul li a.home{
+	font-size: 20px;
+	text-decoration: underline;
+	colour: white;
+	text-transform: capitalize;
+	
+}
+
+
+.navbar ul li a.store{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+.navbar ul li a.feedback{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+.navbar ul li a.gallery{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+.navbar ul li a.user{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+.navbar ul li a.meet{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+
+.navbar ul li a.content{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+.navbar ul li a.page{
+	font-size: 20px;
+	text-decoration: none;
+	colour: white;
+	text-transform: capitalize;
+}
+
+
+.navbar ul li:hover {
+    background-color: rgba(0,0,0,0.35);
+    transition: all 0.4s linear;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: 33%;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar ul li ul.dropdown li {
+    background: #064000;
+    display: block;
+    margin: -10px auto;
+    text-align: center;
+}
+
+.navbar ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    left: 0;
+    margin-top: 10px;
+}
+
+.navbar ul li:hover ul.dropdown {
+    display: block;
+    transition: all 0.4s linear;
+}
+
+.navbar ul li content:hover ul.dropdown,
+.navbar ul li page:hover ul.dropdown {
+    background: #FFFFFF;
+}

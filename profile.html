@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW Test</title>
+     <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            font-family: Arial;
+        }
+        
+       
+        h1 {
+            text-align: center;
+          
+        }
+        
+         p{
+            text-align: center;
+        }
+        
+        #progressBar_1 {
+            width: 25%;
+            background-color: #ddd;
+        }
+       
+        #progressBar_2 {
+            width: 25%;
+            background-color: #ddd;
+        }
+       
+        #progressBar_3{
+            width: 25%;
+            background-color: #ddd;
+        }
+       
+       
+        #progress_1{
+            width: 0%;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: #000000;
+            
+        }
+        
+        #progress_2{
+            width: 0%;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: #000000;
+            
+        }
+       
+        #progress_3{
+            width: 0%;
+            height: 30px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 30px;
+            color: #000000;
+            
+        }
+        fieldset {
+            background-color: #6fc316;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        
+        legend {
+            font-weight: bold;
+            background-color:  #6fc316;
+            text-align: center;
+        }
+        
+        .edit-button {
+            display: none;
+        }
+       
+
+}
+
+      
+        .button{
+            border-radius: 4px;
+            float: inherit;
+        }
+   
+        rounded-button{
+            float: right;
+            border-radius: 8px;    
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+     
+    <div class="banner">
+        <div class="fakenavbar">
+          <img src="logo.png" alt="logo" class="logo">
+        <div class="navbar">
+            <ul>
+                <li><a class="home" href="https://w1986769.users.ecs.westminster.ac.uk/WebDev/w1986769_homepage.html" style="color: white">Home</a></li>
+                <li><a class="store" href="https://w2046966.users.ecs.westminster.ac.uk/WebDev/Shop.html" style="color: white">Store</a></li>
+                <li><a class="feedback" href="https://w1986769.users.ecs.westminster.ac.uk/WebDev/w1986769_feedback.html" style="color: white">Feedback</a></li>
+                <li><a class="gallery" href="#" style="color: white">Gallery</a></li>
+                <li><a class="content" href="#" style="color: white">Content Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="#" style="color: white">Student 1</a></li>
+                        <li><a href="w1986769_pageeditor.html" style="color: white">Student 2</a></li>
+                        <li><a href="#" style="color: white">Student 3</a></li>
+                        <li><a href="#" style="color: white">Student 4</a></li>
+                    </ul>
+                <li><a class="user" href="https://w1991760.users.ecs.westminster.ac.uk/webDev/profile.html" style="color: white">User Profile</a>
+                <li><a class="meet" href="https://w1991760.users.ecs.westminster.ac.uk/webDev/team.html" style="color: white">Meet the team</a>    
+                       </li>
+                <li><a href="#" style="color: white">Page Editors</a>
+                    <ul class="dropdown">
+                        <li><a href="#" style="color: white">Student 1</a></li>
+                        <li><a href="w1986769_pageeditor.html" style="color: white">Student 2</a></li>
+                        <li><a href="#" style="color: white">Student 3</a></li>
+                        <li><a href="#" style="color: white">Student 4</a></li>
+                    </ul>
+                </li>
+            
+            </ul>
+        </div>
+        </div>
+    <br>
+    <br>
+        
+    <h1>User Information</h1>
+        
+    
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <p><span id="question1"></span><span id="answer1"></span><button id="editButton1" class="edit-button" onclick="editAnswer(1)">Edit</button></p>
+        <br>
+        <p><span id="question2"></span><span id="answer2"></span><button id="editButton2" class="edit-button" onclick="editAnswer(2)">Edit</button></p>
+        <br>
+        <p><span id="question3"></span><span id="answer3"></span><button id="editButton3" class="edit-button" onclick="editAnswer(3)">Edit</button></p>
+        <br>
+        <p><span id="question4"></span><span id="answer4"></span><button id="editButton4" class="edit-button" onclick="editAnswer(4)">Edit</button></p>
+        <br>
+    </fieldset>
+
+    <button  type="button" class="rounded-button" onclick="step1();">Start with Step 1</button>
+   
+    
+    <br>
+    <br>
+    
+    <div id="progressBar_1">
+        <div id="progress_1">0%</div>
+    </div>
+    
+    
+    <br>
+    <br>
+    
+    <fieldset>
+        <legend>Studies</legend>
+     <p><span id="question5"></span><span id="answer5"></span><button id="editButton5" class="edit-button" onclick="editAnswer(5)">Edit</button></p>
+        <p><span id="question6"></span><span id="answer6"></span><button id="editButton6" class="edit-button" onclick="editAnswer(6)">Edit</button></p>
+        <p><span id="question7"></span><span id="answer7"></span><button id="editButton7" class="edit-button" onclick="editAnswer(7)">Edit</button></p>
+        <p><span id="question8"></span><span id="answer8"></span><button id="editButton8" class="edit-button" onclick="editAnswer(8)">Edit</button></p>
+    </fieldset>
+    
+     <button type="button" class="rounded-button"  onclick="step2();">Start with Step 2</button>
+       <br>
+    
+    <div id="progressBar_2">
+        <div id="progress_2">0%</div>
+    </div>
+     
+    
+    <br>
+    <br>
+   
+    
+    <fieldset>
+        <legend>Contacts</legend>
+        <p><span id="question9"></span><span id="answer9"></span><button id="editButton9" class="edit-button" onclick="editAnswer(9)">Edit</button></p>
+        <p><span id="question10"></span><span id="answer10"></span><button id="editButton10" class="edit-button" onclick="editAnswer(10)">Edit</button></p>
+        <p><span id="question11"></span><span id="answer11"></span><button id="editButton11" class="edit-button" onclick="editAnswer(11)">Edit</button></p>
+        <p><span id="question12"></span><span id="answer12"></span><button id="editButton12" class="edit-button" onclick="editAnswer(12)">Edit</button></p>
+    </fieldset>
+    
+   <button type="button" class="rounded-button"  onclick="step3();">Start with Step 3</button>
+    
+    <br>
+    
+    <div id="progressBar_3">
+        <div id="progress_3">0%</div>
+    </div>
+     
+    <br>
+    <br>
+   
+<input type="submit" name="button" value="Send" class="rounded-button">
+    <input type="reset" name="button" value="Reset" class="rounded-button">
+    </div>
+    
+    <script>
+       
+        
+        var question1_text = "Name: ";
+        var question2_text = "Surname: ";
+        var question3_text = "Gender: ";
+        var question4_text = "Age: ";
+        var progressBar = document.getElementById("progress_1");
+        var question5_text= "Field of Study: ";
+        var question6_text= "University: ";
+        var question7_text= "Asspiration: ";
+        var question8_text= "Expected time to finish studies: ";
+        var progressBar = document.getElementById("progress_2");
+        var question9_text="Email:  ";
+        var question10_text="Contact number:  ";
+        var question11_text="Postcode:  ";
+        var question12_text="House Number:  ";
+         var progressBar = document.getElementById("progress_3");
+
+        
+        
+        
+        
+        
+        function step1() {
+            let userAnswer1 = prompt(question1_text);
+            if (userAnswer1 !== null) {
+                document.getElementById("question1").innerHTML = question1_text;
+                document.getElementById("answer1").innerHTML = userAnswer1;
+                document.getElementById("editButton1").style.display = "inline-block";
+                updateProgress_1();
+            }
+
+            let userAnswer2 = prompt(question2_text);
+            if (userAnswer2 !== null) {
+                document.getElementById("question2").innerHTML = question2_text;
+                document.getElementById("answer2").innerHTML = userAnswer2;
+                document.getElementById("editButton2").style.display = "inline-block";
+                updateProgress_1();
+            }
+
+            let userAnswer3 = prompt(question3_text);
+            if (userAnswer3 !== null) {
+                document.getElementById("question3").innerHTML = question3_text;
+                document.getElementById("answer3").innerHTML = userAnswer3;
+                document.getElementById("editButton3").style.display = "inline-block";
+                updateProgress_1();
+            }
+
+            let userAnswer4 = prompt(question4_text);
+            if (userAnswer4 !== null) {
+                document.getElementById("question4").innerHTML = question4_text;
+                document.getElementById("answer4").innerHTML = userAnswer4;
+                document.getElementById("editButton4").style.display = "inline-block";
+                updateProgress_1();
+            }
+        }
+
+        function step2() {
+            let userAnswer5 = prompt(question5_text);
+            if (userAnswer5 !== null) {
+                document.getElementById("question5").innerHTML = question5_text;
+                document.getElementById("answer5").innerHTML = userAnswer5;
+                document.getElementById("editButton5").style.display = "inline-block";
+                updateProgress_2();
+            }
+
+            let userAnswer6 = prompt(question6_text);
+            if (userAnswer6 !== null) {
+                document.getElementById("question6").innerHTML = question6_text;
+                document.getElementById("answer6").innerHTML = userAnswer6;
+                document.getElementById("editButton6").style.display = "inline-block";
+                updateProgress_2();
+            }
+
+            let userAnswer7 = prompt(question7_text);
+            if (userAnswer7 !== null) {
+                document.getElementById("question7").innerHTML = question7_text;
+                document.getElementById("answer7").innerHTML = userAnswer7;
+                document.getElementById("editButton7").style.display = "inline-block";
+                updateProgress_2();
+            }
+        
+        
+            
+            let userAnswer8 = prompt(question8_text);
+            if (userAnswer8 !== null) {
+                document.getElementById("question8").innerHTML = question8_text;
+                document.getElementById("answer8").innerHTML = userAnswer8;
+                document.getElementById("editButton8").style.display = "inline-block";
+                updateProgress_2();
+            }
+        }
+        
+        function step3() {
+            let userAnswer9 = prompt(question9_text);
+            if (userAnswer9  !== null) {
+                document.getElementById("question9").innerHTML = question9_text;
+                document.getElementById("answer9").innerHTML = userAnswer9;
+                document.getElementById("editButton9").style.display = "inline-block";
+                updateProgress_3();
+            }
+
+            let userAnswer10 = prompt(question10_text);
+            if (userAnswer10 !== null) {
+                document.getElementById("question10").innerHTML = question10_text;
+                document.getElementById("answer10").innerHTML = userAnswer10;
+                document.getElementById("editButton10").style.display = "inline-block";
+                updateProgress_3();
+            }
+
+            let userAnswer11 = prompt(question11_text);
+            if (userAnswer11 !== null) {
+                document.getElementById("question11").innerHTML = question11_text;
+                document.getElementById("answer11").innerHTML = userAnswer11;
+                document.getElementById("editButton11").style.display = "inline-block";
+                updateProgress_3();
+            }
+        
+        
+            
+            let userAnswer12 = prompt(question12_text);
+            if (userAnswer12 !== null) {
+                document.getElementById("question12").innerHTML = question12_text;
+                document.getElementById("answer12").innerHTML = userAnswer12;
+                document.getElementById("editButton12").style.display = "inline-block";
+                updateProgress_3();
+            }
+        }
+function updateProgress_1() {
+            var progress_1 = document.getElementById("progress_1");
+            var currentWidth = parseInt(progress_1.style.width) || 0;
+            var newWidth = currentWidth + 25;
+            progress_1.style.width = newWidth + '%';
+            progress_1.innerHTML = newWidth + '%';
+        }
+        
+        function updateProgress_2() {
+            var progress_2 = document.getElementById("progress_2");
+            var currentWidth = parseInt(progress_2.style.width) || 0;
+            var newWidth = currentWidth + 25;
+            progress_2.style.width = newWidth + '%';
+            progress_2.innerHTML = newWidth + '%';
+        }
+        
+        function updateProgress_3() {
+            var progress_3 = document.getElementById("progress_3");
+            var currentWidth = parseInt(progress_3.style.width) || 0;
+            var newWidth = currentWidth + 25;
+            progress_3.style.width = newWidth + '%';
+            progress_3.innerHTML = newWidth + '%';
+        }
+        
+        
+        
+        
+        function editAnswer(questionNumber) {
+            var question = "question" + questionNumber + "_text";
+            var answer = "answer" + questionNumber;
+            var newAnswer = prompt(eval(question));
+            if (newAnswer !== null) {
+                document.getElementById(answer).innerHTML = newAnswer;
+            }
+        }
+</script>
+</body>
+
+    </html>
